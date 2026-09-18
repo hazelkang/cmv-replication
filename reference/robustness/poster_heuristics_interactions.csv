@@ -1,0 +1,28 @@
+moderator,mod_col,mod_pretty,status,quartile,coef,se,p,sig,n,adj_r2
+PosterLen,poster_length_Q,\textit{Poster length quartiles} (argument length in characters),Low,Q2,-0.02373186616157153,0.01783089647124926,0.18320851775414415,,10244,0.00032608880764040116
+PosterLen,poster_length_Q,\textit{Poster length quartiles} (argument length in characters),Low,Q3,-0.022247518267171106,0.01763863277346848,0.20720260356567222,,10244,0.00032608880764040116
+PosterLen,poster_length_Q,\textit{Poster length quartiles} (argument length in characters),Low,Q4,-0.00986004542961385,0.018314597276014772,0.5903210420008782,,10244,0.00032608880764040116
+PosterLen,poster_length_Q,\textit{Poster length quartiles} (argument length in characters),Mid,Q2,-0.02511048618823408,0.02954211337116424,0.39533092367297384,,2866,0.0020783213112101073
+PosterLen,poster_length_Q,\textit{Poster length quartiles} (argument length in characters),Mid,Q3,-0.0036454432946196463,0.0348985558810359,0.916805670907131,,2866,0.0020783213112101073
+PosterLen,poster_length_Q,\textit{Poster length quartiles} (argument length in characters),Mid,Q4,-0.04012433113793068,0.034975368739886104,0.2512920236026366,,2866,0.0020783213112101073
+PosterLen,poster_length_Q,\textit{Poster length quartiles} (argument length in characters),High,Q2,-0.0009543456518971982,0.026323066465612808,0.9710789439739484,,4226,0.0015340132982012422
+PosterLen,poster_length_Q,\textit{Poster length quartiles} (argument length in characters),High,Q3,0.020641976070442124,0.031049703819927128,0.5061756831788657,,4226,0.0015340132982012422
+PosterLen,poster_length_Q,\textit{Poster length quartiles} (argument length in characters),High,Q4,-0.005477271539603378,0.027238366295686198,0.8406308288773731,,4226,0.0015340132982012422
+PosterRep,reputation_poster_Q,\textit{Poster status quartiles} (cumulative $\Delta$ points prior to experiment),Low,Q2,-0.014405373532878707,0.015476443161283174,0.3519603647385934,,10244,0.00025375362938395707
+PosterRep,reputation_poster_Q,\textit{Poster status quartiles} (cumulative $\Delta$ points prior to experiment),Low,Q3,0.010445917730302904,0.01938603883403917,0.5899992338938356,,10244,0.00025375362938395707
+PosterRep,reputation_poster_Q,\textit{Poster status quartiles} (cumulative $\Delta$ points prior to experiment),Low,Q4,-0.021326993403561034,0.017923791335528978,0.23409723237561686,,10244,0.00025375362938395707
+PosterRep,reputation_poster_Q,\textit{Poster status quartiles} (cumulative $\Delta$ points prior to experiment),Mid,Q2,-0.06072443535508873,0.031191853965014966,0.051558201521708744,*,2866,0.0020124053548227216
+PosterRep,reputation_poster_Q,\textit{Poster status quartiles} (cumulative $\Delta$ points prior to experiment),Mid,Q3,0.008973155181582225,0.03365536033332826,0.7897626014566845,,2866,0.0020124053548227216
+PosterRep,reputation_poster_Q,\textit{Poster status quartiles} (cumulative $\Delta$ points prior to experiment),Mid,Q4,-0.021085975206820064,0.035268938515242265,0.5499316938007841,,2866,0.0020124053548227216
+PosterRep,reputation_poster_Q,\textit{Poster status quartiles} (cumulative $\Delta$ points prior to experiment),High,Q2,0.008230726002790935,0.02560048602364583,0.7478264882946197,,4226,0.0011198558770986189
+PosterRep,reputation_poster_Q,\textit{Poster status quartiles} (cumulative $\Delta$ points prior to experiment),High,Q3,-0.010840020664027113,0.03134583523297384,0.7294778995663569,,4226,0.0011198558770986189
+PosterRep,reputation_poster_Q,\textit{Poster status quartiles} (cumulative $\Delta$ points prior to experiment),High,Q4,0.018237086627168143,0.030665328815464153,0.5520349614289091,,4226,0.0011198558770986189
+PosterTen,poster_tenure_Q,\textit{Poster tenure quartiles} (days active on CMV since first post/comment),Low,Q2,-0.0026732901695166876,0.024210559478853474,0.9120775963538024,,10244,0.0005317043783481523
+PosterTen,poster_tenure_Q,\textit{Poster tenure quartiles} (days active on CMV since first post/comment),Low,Q3,-0.011760487134572149,0.02168656915952082,0.5876162805343812,,10244,0.0005317043783481523
+PosterTen,poster_tenure_Q,\textit{Poster tenure quartiles} (days active on CMV since first post/comment),Low,Q4,-0.007808359735820598,0.016120062754644785,0.6281107629982439,,10244,0.0005317043783481523
+PosterTen,poster_tenure_Q,\textit{Poster tenure quartiles} (days active on CMV since first post/comment),Mid,Q2,0.012164793581823152,0.05071022136366763,0.8104167781446381,,2866,0.000862472232299849
+PosterTen,poster_tenure_Q,\textit{Poster tenure quartiles} (days active on CMV since first post/comment),Mid,Q3,0.002806369361072064,0.045591893506017805,0.9509179062166572,,2866,0.000862472232299849
+PosterTen,poster_tenure_Q,\textit{Poster tenure quartiles} (days active on CMV since first post/comment),Mid,Q4,-0.05611619582777885,0.03003068814025303,0.061674535919763136,*,2866,0.000862472232299849
+PosterTen,poster_tenure_Q,\textit{Poster tenure quartiles} (days active on CMV since first post/comment),High,Q2,0.06601323209073415,0.04625687911670988,0.1535508238985382,,4226,0.0010004354109183211
+PosterTen,poster_tenure_Q,\textit{Poster tenure quartiles} (days active on CMV since first post/comment),High,Q3,0.033273878496838286,0.032962325538212475,0.31275801166540074,,4226,0.0010004354109183211
+PosterTen,poster_tenure_Q,\textit{Poster tenure quartiles} (days active on CMV since first post/comment),High,Q4,-0.010985689701862315,0.027265259001720072,0.6870078455145087,,4226,0.0010004354109183211

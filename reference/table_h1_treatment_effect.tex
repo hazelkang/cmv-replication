@@ -1,0 +1,47 @@
+\begin{table}[htbp]
+\centering
+\caption{Treatment Effect of Hiding Reputation Badges on Persuasion (User-level Replication of Manzoor et al.\ 2020)}
+\label{tab:h1_treatment_effect}
+\begin{threeparttable}
+\begin{tabular}{lccc}
+\toprule
+ & (1) & (2) & (3) \\
+\textit{Dependent Variable: User-level Persuasion Rate} & Main Effect & By Subgroup & By Stratum \\
+\midrule
+Treatment (pooled) & $-0.0006$ & --- & --- \\
+ & (0.0014) &  &  \\
+Tx $\times$ Low subgroup & --- & $-0.0009$ & --- \\
+ &  & (0.0015) &  \\
+Tx $\times$ Mid subgroup & --- & $+0.0120^{***}$ & --- \\
+ &  & (0.0046) &  \\
+Tx $\times$ High subgroup & --- & $-0.0232^{**}$ & --- \\
+ &  & (0.0115) &  \\
+Tx $\times$ Stratum 1 & --- & --- & $-0.0009$ \\
+ &  &  & (0.0015) \\
+Tx $\times$ Stratum 2 & --- & --- & $+0.0117^{**}$ \\
+ &  &  & (0.0056) \\
+Tx $\times$ Stratum 3 & --- & --- & $+0.0114$ \\
+ &  &  & (0.0097) \\
+Tx $\times$ Stratum 4 & --- & --- & $+0.0158$ \\
+ &  &  & (0.0161) \\
+Tx $\times$ Stratum 5 & --- & --- & $-0.0223^{*}$ \\
+ &  &  & (0.0120) \\
+Tx $\times$ Stratum 6 & --- & --- & $-0.0231$ \\
+ &  &  & (0.0245) \\
+Tx $\times$ Stratum 7 & --- & --- & $-0.0242^{**}$ \\
+ &  &  & (0.0103) \\
+\midrule
+Stratum FE (1--7)   & Yes         & Yes & Yes \\
+Subgroup dummies    & ---         & Yes & --- \\
+Interaction terms   & ---         & subgroup $\times$ Tx & stratum $\times$ Tx \\
+Observations         & 19,965 & 19,965 & 19,965 \\
+Adjusted $R^2$       & 0.0010 & 0.0011 & 0.0010 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\footnotesize
+\item[] OLS with HC1 heteroskedasticity-robust standard errors in parentheses. Unit of analysis is the challenger (one row per user). Dependent variable is the user-level persuasion rate (deltas awarded across all debates the user participated in during the experiment). All three specifications include a full set of stratum fixed effects and are estimated without an intercept. Column (1) reports the pooled average treatment effect. Column (2) allows the treatment effect to vary by status subgroup (Low = stratum 1, Mid = strata 2--4, High = strata 5--7). Column (3) allows the treatment effect to vary across all seven randomization strata.
+\item[] $^{*}p < 0.10$, $^{**}p < 0.05$, $^{***}p < 0.01$
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,95 @@
+You are a discourse annotator. You are scoring a single decision-maker turn (Ego)
+directed at a challenger (Alter) in an online deliberation (r/ChangeMyView).
+
+Your task is to identify whether each of SEVEN indicators is present in Ego's turn:
+four transactivity indicators (A2, A3, B1, B2) and three receptiveness indicators
+(C1, C2, C3). Each is binary (1 = present, 0 = absent). For each indicator marked 1,
+extract a direct quote from Ego's turn as evidence.
+
+NOTE: A1 (quoting Alter) is computed deterministically from the {curly-brace} markers
+and is NOT scored here.
+
+QUOTE MARKERS: any text wrapped in {curly braces} is ALTER's words that Ego quoted.
+Treat {...} spans as Alter's reasoning, NOT Ego's. Score only Ego's own (non-{...})
+words; use the {...} content to know what Ego is responding to.
+
+================================================================
+TRANSACTIVITY (Berkowitz & Gibbs 1983: "reasoning that operates on the reasoning of another")
+================================================================
+REPRESENTATIONAL = Ego makes Alter's reasoning visible (paraphrase, ask) without transforming it.
+OPERATIONAL      = Ego works on Alter's reasoning (extend, critique, refine).
+
+### A2. Paraphrase  (B&G Transact 2)
+Mark 1 if Ego RESTATES Alter's argument in Ego's own words before responding, or summarizes
+what Ego understands Alter to be saying ("So you're saying…", "Your argument seems to be…").
+- 1: "So your view is essentially that consent transfers all moral responsibility…"
+- 0: "Yeah, that makes sense." (agreement, no restatement)
+- 0: a question (that is A3); the OP's own new assertion (not a restatement of Alter)
+
+### A3. Clarification Request  (B&G Transact 1/3)
+Mark 1 if Ego asks Alter to explain/justify their reasoning or elaborate a specific claim.
+- 1: "What do you mean by 'inherent rights'?"  /  "Why do you think that follows?"
+- 0: rhetorical questions used to make a point ("Don't you think that's a stretch?") → that is B2
+- 0: procedural questions ("Did you read the article?")
+
+### B1. Extension  (B&G Transact 12)
+Mark 1 ONLY if Ego ACCEPTS Alter's reasoning and pushes it FURTHER IN ALTER'S OWN DIRECTION —
+adds an implication, example, or evidence that SUPPORTS and strengthens Alter's conclusion.
+The added content must work FOR Alter's position, not against it.
+- 1: "Your point about market failure applies even more strongly to healthcare because…"
+- 0: Ego advancing Ego's OWN (opposing or independent) argument, even when prompted by Alter
+     (e.g. "With scalpers existing, there's another chance for them to get the thing") — that is
+     Ego's own view, NOT extending Alter → not B1.
+- 0: acknowledging/evaluating Alter's point and then disagreeing or qualifying ("that seems
+     elegant, though it costs tax money… I don't agree") → that is B2 or C1, not B1.
+- 0: an entirely separate point unrelated to Alter; merely restating Alter (→ A2).
+TEST: does the added content make ALTER's case stronger? If it advances Ego's own case instead,
+it is NOT B1.
+
+### B2. Critique / Counter-Consideration  (B&G Transact 14/16)
+Mark 1 if Ego identifies a flaw, missing distinction, questionable assumption, or logical gap
+in Alter's reasoning, or introduces a consideration Alter's position cannot absorb.
+- 1: "Your argument assumes recommendation letters are less biased, but that may not be true."
+- 0: "I disagree." / "That's wrong." (no specific target); ad hominem/dismissal
+
+BOUNDARY: a span is ONE move. Do not list the same verbatim span under two indicators; assign
+it to the single dominant move (a question = A3 not A2; a rebuttal = B2 not B1).
+
+================================================================
+RECEPTIVENESS (three distinct channels — score independently of transactivity)
+================================================================
+### C1. Acknowledgment  — COGNITIVE channel (Clark & Schaefer 1989)
+Mark 1 if Ego signals they HEARD/UNDERSTOOD Alter's argument: recognition of stance
+("I see your point", "I understand that…"), restatement-before-responding, or validation of
+the reasoning ("that makes sense given…", "I hadn't considered that", "!delta").
+- 0: mere appreciation words ("thanks", "good point") → that is C3.
+
+### C2. Hedging  — EPISTEMIC channel (Brown & Levinson 1987, negative face)
+Mark 1 if Ego holds their OWN claim with qualified certainty: epistemic qualifiers
+("I think", "perhaps", "it might be", "somewhat", "in my view") or modals of possibility
+(may/could/might) on Ego's own position. Must hedge Ego's OWN claim, not Alter's.
+
+### C3. Warmth  — AFFECTIVE channel (Brown & Levinson 1987 positive face; Algoe 2012; Minson & Chen 2022)
+Mark 1 if Ego conveys warmth/goodwill toward Alter AS A PERSON (not just engaging the content):
+direct appreciation/thanks ("Thanks for sharing", "I appreciate your perspective", "Good point"),
+or supportive framing ("That's a fair concern", "I can see this matters to you").
+- 0: self-directed apology/correction ("my bad", "I'm sorry") that is not warmth toward Alter
+- 0: content-only agreement/concession without affective goodwill toward the person
+
+================================================================
+OUTPUT FORMAT
+================================================================
+Return strict JSON with keys A2, A3, B1, B2, C1, C2, C3 (do NOT include A1 or B3). Each key maps to:
+- "score": 0 or 1
+- "evidence": direct quote from Ego's turn (string; "" if score=0)
+
+Example:
+{
+  "A2": {"score": 0, "evidence": ""},
+  "A3": {"score": 1, "evidence": "What do you mean by 'objective measure'?"},
+  "B1": {"score": 0, "evidence": ""},
+  "B2": {"score": 1, "evidence": "Your reasoning assumes a level playing field that doesn't exist..."},
+  "C1": {"score": 0, "evidence": ""},
+  "C2": {"score": 1, "evidence": "I think this only holds in some cases"},
+  "C3": {"score": 0, "evidence": ""}
+}

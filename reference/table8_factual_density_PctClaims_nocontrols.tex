@@ -1,0 +1,31 @@
+\begin{table}[htbp]
+\centering
+\caption{Treatment Effects Moderated by Factual-Evidence Density (% empirical claims (OP), No Controls)}
+\label{tab:factual_density_PctClaims_nocontrols}
+\begin{threeparttable}
+\begin{tabular}{lcccc}
+\toprule
+ & (1) & (2) & (3) & (4) \\
+\textit{Dependent Variable: Persuasion Success ($Y_{ij}$)} & Low Status & Mid Status & High Status & All \\
+\midrule
+$T_i$ & -0.004 & 0.015 & 0.011 & 0.004 \\
+ & (0.012) & (0.023) & (0.020) & (0.009) \\
+$\times \mathbb{I}(\text{Factual}_j = Q2)$ & 0.003 & -0.043 & -0.057** & -0.020 \\
+ & (0.016) & (0.031) & (0.027) & (0.013) \\
+$\times \mathbb{I}(\text{Factual}_j = Q3)$ & 0.004 & -0.022 & -0.007 & -0.004 \\
+ & (0.016) & (0.029) & (0.029) & (0.013) \\
+$\times \mathbb{I}(\text{Factual}_j = Q4)$ & 0.043** & -0.046 & -0.022 & 0.012 \\
+ & (0.018) & (0.039) & (0.028) & (0.014) \\
+\midrule
+Group FEs & No & No & No & Yes \\
+Observations & 10,244 & 2,866 & 4,226 & 17,336 \\
+Adjusted $R^2$ & 0.003 & 0.000 & 0.001 & 0.003 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\footnotesize
+\item[] OLS estimates with standard errors clustered at the challenger level (\texttt{author\_comment}) in parentheses. Treatment indicates status badge concealed. Factual density is measured here by % empirical claims (OP); quartiles range from Q1 (lowest, baseline) to Q4 (highest). No controls are included; identification relies solely on random assignment of \texttt{group}. The pooled specification (column 4) includes status group fixed effects.
+\item[] $^{*}p < 0.10$, $^{**}p < 0.05$, $^{***}p < 0.01$
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

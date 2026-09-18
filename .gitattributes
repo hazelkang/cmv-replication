@@ -1,0 +1,5 @@
+* text=auto eol=lf
+data/*.csv -text
+data/*.jsonl -text
+data/MANIFEST.json -text
+*.png binary

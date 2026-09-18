@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying paper and this replication repository."
+title: "CMV reputation: replication data and code"
+type: software
+authors:
+  - family-names: Kang
+    given-names: Hazel Hye Seung
+  - family-names: Manzoor
+    given-names: Emaad
+  - family-names: Lee
+    given-names: Dokyun
+repository-code: "https://github.com/hazelkang/cmv-replication"
+version: "2026.09.18"
+date-released: "2026-09-18"
+preferred-citation:
+  type: unpublished
+  title: "How Visible Status Shapes Persuasion and Engagement in Online Deliberation: Evidence from a Field Experiment"
+  authors:
+    - family-names: Kang
+      given-names: Hazel Hye Seung
+    - family-names: Manzoor
+      given-names: Emaad
+    - family-names: Lee
+      given-names: Dokyun
+  year: 2026

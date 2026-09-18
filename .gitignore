@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.cache/
+.DS_Store
+.env
+replication_H1/results/
+replication_H1/tables/
+replication_H2/results/
+replication_H2/tables/
+replication_H2/appendix/
+replication_H2/robustness/results/
+replication_H2/robustness/tables/
+replication_H3_ABC_indicators/merged_pipeline/*.csv
+replication_H3_ABC_indicators/merged_pipeline/figures_final/
+verification.json

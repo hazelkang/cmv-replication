@@ -1,0 +1,34 @@
+{
+  "data/cmv_experiment_data_17336.csv": {
+    "sha256": "3760940717b31049b0ea4432e2a4cf3759b6ab253474531f7c60e29e986881d9",
+    "bytes": 4142749
+  },
+  "data/cmv_experiment_data_17336_with_measures.csv": {
+    "sha256": "f0edebf7b8608338c3501148524b1483e68b59e959d01349ab1b33c0a6306f43",
+    "bytes": 4761526
+  },
+  "data/cmv_experiment_data_18590_balance_check.csv": {
+    "sha256": "5cf8cfd445247a9da0cfacffa5ba4a4f6b1c2db9659c1697455f513cfdeec7b0",
+    "bytes": 960968
+  },
+  "data/cmv_experiment_data_19965_regression.csv": {
+    "sha256": "78b886ddbf4feee7c4ce167a7379217697bcf6e9fd43495ea7601f056d0f5947",
+    "bytes": 1766538
+  },
+  "data/data_package_measures_llmclean.csv": {
+    "sha256": "7aa72f576b87da9a39a1a6265f9381d9c03b839945ccf35b75835137ce8bf4e6",
+    "bytes": 1973022
+  },
+  "data/submission_claim_counts.csv": {
+    "sha256": "0811432f59cf2219d288446a6baad4de1606b2d65a99facd87d9cd6f4c498539",
+    "bytes": 39796
+  },
+  "data/unified_annotations_scores.jsonl": {
+    "sha256": "85f7e09c9333e95afd5017deefa0578c9f8b28dd43c0e6840a9560651a59ecaa",
+    "bytes": 1938888
+  },
+  "data/claim_validation_labels.csv": {
+    "sha256": "6a16aaf5a9f119e5c928a8f2e80514a3b60115f94edfb20234e2bdaae6a9e464",
+    "bytes": 3674
+  }
+}
