@@ -28,4 +28,4 @@ Outputs are saved in `paper_results/`.
 
 Figures 2–3 match the images embedded in the paper exactly; Table 4 matches numerically. Table 3’s standard errors/significance and the engagement sample description have documented differences. See the [paper comparison](docs/PAPER_RESULTS.md).
 
-Further details: [data dictionary](docs/DATA_DICTIONARY.md) · [verification](docs/VERIFICATION.md) · [citation](CITATION.cff).
+Further details: [data dictionary](docs/DATA_DICTIONARY.md) · [verification](docs/VERIFICATION.md) · [participant privacy](docs/PRIVACY.md) · [citation](CITATION.cff).

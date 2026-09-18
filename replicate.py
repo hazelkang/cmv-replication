@@ -29,7 +29,7 @@ def main():
     p.add_argument('--simex', action='store_true', help='Also run expensive SIMEX; B and R environment variables control repetitions')
     p.add_argument('--no-figures', action='store_true')
     args = p.parse_args()
-    scripts = ['scripts/verify_inputs.py', 'scripts/rebuild_claim_measures.py', 'scripts/validate_claim_labels.py',
+    scripts = ['scripts/verify_inputs.py', 'scripts/check_privacy.py', 'scripts/rebuild_claim_measures.py', 'scripts/validate_claim_labels.py',
                'replication_H1/analysis/run_h1_treatment_effect.py',
                'replication_H1/analysis/run_balance_check.py',
                'replication_H2/analysis/run_table8.py',
