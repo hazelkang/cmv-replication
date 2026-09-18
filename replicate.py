@@ -5,8 +5,23 @@ import os
 import subprocess
 import sys
 import time
+import shutil
 
 ROOT = Path(__file__).resolve().parent
+
+def export_paper_results(include_figures=True):
+    destination = ROOT / 'paper_results'
+    destination.mkdir(exist_ok=True)
+    files = {
+        'replication_H1/tables/table_h1_treatment_effect.tex': 'table3_replication_models.tex',
+        'replication_H2/tables/table8_factual_density_PctClaims_nocontrols.tex': 'table4_empirical_claim_density.tex',
+    }
+    if include_figures:
+        for ext in ['png', 'pdf']:
+            files[f'replication_H3_ABC_indicators/merged_pipeline/figures_final/main/fig1_engagement_overview.{ext}'] = f'figure2_engagement.{ext}'
+            files[f'replication_H3_ABC_indicators/merged_pipeline/figures_final/appendix/appx_A_composite_by_context.{ext}'] = f'figure3_representational_by_context.{ext}'
+    for source, name in files.items():
+        shutil.copyfile(ROOT / source, destination / name)
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
@@ -33,7 +48,8 @@ def main():
     for script in scripts:
         print(f'\n=== {script} ===', flush=True)
         subprocess.run([sys.executable, str(ROOT / script)], cwd=ROOT, env=env, check=True)
-    print(f'\nReplication completed in {time.monotonic()-started:.1f}s. See verification.json and docs/KNOWN_DIFFERENCES.md.')
+    export_paper_results(include_figures=not args.no_figures)
+    print(f'\nReplication completed in {time.monotonic()-started:.1f}s. Paper-numbered outputs: paper_results/. See verification.json and docs/PAPER_RESULTS.md.')
 
 if __name__ == '__main__':
     main()

@@ -1,0 +1,35 @@
+{
+  "paper_sha256": "a3934c278787474dd895e1954a734a94c178d68b8985b689b36b6fd28b83a134",
+  "figures": [
+    {
+      "figure": 2,
+      "pdf_page": 8,
+      "embedded_name": "Im2.png",
+      "embedded_size": [
+        5025,
+        1515
+      ],
+      "generated_size": [
+        5025,
+        1515
+      ],
+      "pixel_identical": true
+    },
+    {
+      "figure": 3,
+      "pdf_page": 9,
+      "embedded_name": "Im3.png",
+      "embedded_size": [
+        4425,
+        1438
+      ],
+      "generated_size": [
+        4425,
+        1438
+      ],
+      "pixel_identical": true
+    }
+  ],
+  "paper_filename": "Hicss_conference_paper_0918.pdf",
+  "comparison": "RGB pixel equality between embedded PDF images and regenerated PNGs"
+}

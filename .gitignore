@@ -14,3 +14,4 @@ replication_H2/robustness/tables/
 replication_H3_ABC_indicators/merged_pipeline/*.csv
 replication_H3_ABC_indicators/merged_pipeline/figures_final/
 verification.json
+paper_results/
